@@ -1,4 +1,4 @@
-service: feeds-of-science-feeds-api
+service: controversies-of-science-feeds-api
 
 frameworkVersion: ">=1.1.0 <2.0.0"
 
