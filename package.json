@@ -1,22 +1,22 @@
 {
-  "name": "aws-lambda-worldviewer-api",
+  "name": "aws-lambda-worldviewer-feeds-api",
   "version": "1.0.0",
-  "description": "Backend API for the Controversies of Science app",
+  "description": "Controversy Feeds Backend API for the Controversies of Science app",
   "main": "handler.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/controversies-of-science/aws-lambda-worldviewer-api.git"
+    "url": "git+https://github.com/controversies-of-science/aws-lambda-worldviewer-feeds-api.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/controversies-of-science/aws-lambda-worldviewer-api/issues"
+    "url": "https://github.com/controversies-of-science/aws-lambda-worldviewer-feeds-api/issues"
   },
-  "homepage": "https://github.com/controversies-of-science/aws-lambda-worldviewer-api#readme",
+  "homepage": "https://github.com/controversies-of-science/aws-lambda-worldviewer-feeds-api#readme",
   "devDependencies": {
     "aws-sdk": "^2.91.0",
     "babel-core": "^6.25.0",

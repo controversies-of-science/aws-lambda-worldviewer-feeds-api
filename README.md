@@ -2,22 +2,22 @@
 
 ## Endpoints
 
-### Create a New Controversy
+### Create a New Feed
 
-> curl -X POST https://q9paj2zuf1.execute-api.us-west-1.amazonaws.com/prod/controversies --data '{ "slug": "test-controversy", "name": "This is a Test", "summary": "Stuff / Things / About Controversies", "category": "ongoing", "text": [ "one", "two", "three" ] }'
+> curl -X POST https://nz2t3hld20.execute-api.us-west-1.amazonaws.com/prod/feeds/halton-arp --data '{ "feedSlug": "test-feed", "name": "This is a Test",  "category": "ongoing", "text": [ "one", "two", "three" ], "posted": "https://plus.google.com/+ChrisReeveOnlineScientificDiscourseIsBroken/posts/HrBYGqWXFwY", "author": "worldviewer", "images": { "pyramid": { "maxZoomLevel": 2, "TileSize": 512 }, "large": { "height": 2048, "width": 2048 } } }'
 
-### Get a Controversy by Slug
+### Get a Specific Feed for a Particular Controversy
 
-> curl https://q9paj2zuf1.execute-api.us-west-1.amazonaws.com/prod/controversies/test-controversy
+> curl https://nz2t3hld20.execute-api.us-west-1.amazonaws.com/prod/feeds/halton-arp/test-feed
 
-### Get All Controversy Card Slugs
+### Get All Feed Card Slugs for a Particular Controversy
 
-> curl https://q9paj2zuf1.execute-api.us-west-1.amazonaws.com/prod/controversies
+> curl https://nz2t3hld20.execute-api.us-west-1.amazonaws.com/prod/feeds/halton-arp
 
-### Delete a Controversy
+### Delete a Feed Card
 
-> curl -X DELETE https://q9paj2zuf1.execute-api.us-west-1.amazonaws.com/prod/controversies/test-controversy
+> curl -X DELETE https://nz2t3hld20.execute-api.us-west-1.amazonaws.com/prod/feeds/halton-arp/test-feed
 
-### Update a Controversy
+### Update a Feed Card
 
-> curl -X PUT https://q9paj2zuf1.execute-api.us-west-1.amazonaws.com/prod/controversies/test-controversy-2 --data '{ "slug": "test-controversy-2", "name": "This is a Test", "summary": "New Summary", "category": "ongoing", "text": [ "one", "two", "three" ] }'
+> curl -X PUT https://nz2t3hld20.execute-api.us-west-1.amazonaws.com/prod/feeds/halton-arp/test-feed --data '{ "name": "This is an Updated Name for this Feed Card",  "category": "ongoing", "text": [ "one", "two", "three" ], "posted": "https://plus.google.com/+ChrisReeveOnlineScientificDiscourseIsBroken/posts/HrBYGqWXFwY", "author": "worldviewer", "images": { "pyramid": { "maxZoomLevel": 2, "TileSize": 512 }, "large": { "height": 2048, "width": 2048 } } }'

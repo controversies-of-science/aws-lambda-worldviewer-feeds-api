@@ -7,10 +7,18 @@ const
 AWS.config.update({region:'us-west-1'});
 
 export const get = (event, context, callback) => {
+	const cardSlug = event.pathParameters.cardSlug;
+
 	const params = {
 		TableName: process.env.DYNAMODB_TABLE,
+		ScanFilter: {
+			cardSlug: {
+				ComparisonOperator: 'EQ',
+				AttributeValueList: [cardSlug]
+			}
+		},
 		Select: 'SPECIFIC_ATTRIBUTES',
-		AttributesToGet: [ 'slug' ]
+		AttributesToGet: [ 'feedSlug' ]
 	};
 
 	dynamoDb.scan(params, (dbError, result) => {
@@ -22,7 +30,7 @@ export const get = (event, context, callback) => {
 		let slugsArray = [];
 
 		for (let slug of result.Items) {
-			slugsArray.push(slug['slug']);
+			slugsArray.push(slug['feedSlug']);
 		}
 
 		callback(null, success(slugsArray));

@@ -1,4 +1,4 @@
-service: controversies-of-science-api
+service: feeds-of-science-feeds-api
 
 frameworkVersion: ">=1.1.0 <2.0.0"
 
@@ -34,42 +34,42 @@ provider:
 # - authorizer: authenticate using the AWS IAM role
 functions:
   create:
-    handler: cards/create.create
+    handler: feeds/create.create
     events:
       - http:
-          path: controversies
+          path: feeds/{cardSlug}
           method: post
           cors: true
           # authorizer: aws_iam
   get:
-    handler: cards/get.get
+    handler: feeds/get.get
     events:
       - http:
-          path: controversies/{slug}
+          path: feeds/{cardSlug}/{feedSlug}
           method: get
           cors: true
           # authorizer: aws_iam
   slugs:
-    handler: cards/slugs.get
+    handler: feeds/slugs.get
     events:
       - http:
-          path: controversies
+          path: feeds/{cardSlug}
           method: get
           cors: true
           # authorizer: aws_iam
   delete:
-    handler: cards/delete.del
+    handler: feeds/delete.del
     events:
       - http:
-          path: controversies/{slug}
+          path: feeds/{cardSlug}/{feedSlug}
           method: delete
           cors: true
           # authorizer: aws_iam
   update:
-    handler: cards/update.update
+    handler: feeds/update.update
     events:
       - http:
-          path: controversies/{slug}
+          path: feeds/{cardSlug}/{feedSlug}
           method: put
           cors: true
           # authorizer: aws_iam
@@ -81,11 +81,15 @@ resources:
       DeletionPolicy: Retain
       Properties:
         AttributeDefinitions:
-          - AttributeName: slug
+          - AttributeName: cardSlug
+            AttributeType: S
+          - AttributeName: feedSlug
             AttributeType: S
         KeySchema:
-          - AttributeName: slug
+          - AttributeName: cardSlug
             KeyType: HASH
+          - AttributeName: feedSlug
+            KeyType: RANGE
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1

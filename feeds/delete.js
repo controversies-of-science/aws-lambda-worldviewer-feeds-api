@@ -7,12 +7,15 @@ const
 AWS.config.update({region:'us-west-1'});
 
 export const del = (event, context, callback) => {
-	const slug = event.pathParameters.slug;
+	const
+		cardSlug = event.pathParameters.cardSlug,
+		feedSlug = event.pathParameters.feedSlug;
 
 	const params = {
 		TableName: process.env.DYNAMODB_TABLE,
 		Key: {
-			slug
+			cardSlug,
+			feedSlug
 		}
 	};
 
