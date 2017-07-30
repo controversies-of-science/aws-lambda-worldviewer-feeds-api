@@ -9,6 +9,10 @@ The Controversies of Science site will need at least four managed resources:
 
 The controversy cards are adapted from the G+ collection [here](https://plus.google.com/collection/Yhn4Y).  Both the cards and the attached feeds are essentially social media postings, but the difference is that the feeds are subtopics for the larger card topics.
 
+## State of the Project
+
+The API has all of the functionality that I'm going to need, but I'm still adding in validations and security.
+
 ## Endpoints
 
 ### Create a New Feed
