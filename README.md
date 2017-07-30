@@ -1,5 +1,14 @@
 # Controversies of Science API
 
+The Controversies of Science site will need at least four managed resources:
+
+- Controversy Cards
+- Controversy Card Feeds
+- Rankings
+- Site Users
+
+The controversy cards are adapted from the G+ collection [here](https://plus.google.com/collection/Yhn4Y).  Both the cards and the attached feeds are essentially social media postings, but the difference is that the feeds are subtopics for the larger card topics.
+
 ## Endpoints
 
 ### Create a New Feed
