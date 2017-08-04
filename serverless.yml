@@ -14,6 +14,7 @@ provider:
   name: aws
   runtime: nodejs6.10
   stage: prod
+  profile: controversy
   region: us-west-1
   environment:
     DYNAMODB_TABLE: ${self:service}-${opt:stage, self:provider.stage}
