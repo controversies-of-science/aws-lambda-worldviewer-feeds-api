@@ -17,20 +17,20 @@ The API has all of the functionality that I'm going to need, but I'm still addin
 
 ### Create a New Feed
 
-> curl -X POST https://nz2t3hld20.execute-api.us-west-1.amazonaws.com/prod/feeds/halton-arp --data '{ "feedSlug": "test-feed", "feedName": "This is a Test", "feedSummary": "1 / 2 / 3", "feedCategory": "ongoing", "text": [ "one", "two", "three" ], "feedAuthor": "worldviewer", "images": { "pyramid": { "maxZoomLevel": 2, "TileSize": 512 }, "large": { "height": 2048, "width": 2048 } }, "discourseLevel": "narrative" }'
+> curl -X POST https://wu7nsd6i3a.execute-api.us-west-1.amazonaws.com/prod/feeds/halton-arp --data '{ "feedSlug": "test-feed", "feedName": "This is a Test", "feedSummary": "1 / 2 / 3", "feedCategory": "ongoing", "text": [ "one", "two", "three" ], "feedAuthor": "worldviewer", "images": { "pyramid": { "maxZoomLevel": 2, "TileSize": 512 }, "large": { "height": 2048, "width": 2048 } }, "discourseLevel": "narrative" }'
 
 ### Get a Specific Feed for a Particular Controversy
 
-> curl https://nz2t3hld20.execute-api.us-west-1.amazonaws.com/prod/feeds/halton-arp/test-feed
+> curl https://wu7nsd6i3a.execute-api.us-west-1.amazonaws.com/prod/feeds/halton-arp/test-feed
 
 ### Get All Feed Card Slugs for a Particular Controversy
 
-> curl https://nz2t3hld20.execute-api.us-west-1.amazonaws.com/prod/feeds/halton-arp
+> curl https://wu7nsd6i3a.execute-api.us-west-1.amazonaws.com/prod/feeds/halton-arp
 
 ### Delete a Feed Card
 
-> curl -X DELETE https://nz2t3hld20.execute-api.us-west-1.amazonaws.com/prod/feeds/halton-arp/test-feed
+> curl -X DELETE https://wu7nsd6i3a.execute-api.us-west-1.amazonaws.com/prod/feeds/halton-arp/test-feed
 
 ### Update a Feed Card
 
-> curl -X PUT https://nz2t3hld20.execute-api.us-west-1.amazonaws.com/prod/feeds/halton-arp/test-feed --data '{ "feedSlug": "test-feed", "feedName": "This is an Updated Feed Card", "feedSummary": "1 / 2 / 3", "feedCategory": "ongoing", "text": [ "one", "two", "three" ], "feedAuthor": "worldviewer", "images": { "pyramid": { "maxZoomLevel": 2, "TileSize": 512 }, "large": { "height": 2048, "width": 2048 } }, "discourseLevel": "narrative" }'
+> curl -X PUT https://wu7nsd6i3a.execute-api.us-west-1.amazonaws.com/prod/feeds/halton-arp/test-feed --data '{ "feedSlug": "test-feed", "feedName": "This is an Updated Feed Card", "feedSummary": "1 / 2 / 3", "feedCategory": "ongoing", "text": [ "one", "two", "three" ], "feedAuthor": "worldviewer", "images": { "pyramid": { "maxZoomLevel": 2, "TileSize": 512 }, "large": { "height": 2048, "width": 2048 } }, "discourseLevel": "narrative" }'
