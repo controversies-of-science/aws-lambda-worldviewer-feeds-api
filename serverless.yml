@@ -92,6 +92,6 @@ resources:
           - AttributeName: feedSlug
             KeyType: RANGE
         ProvisionedThroughput:
-          ReadCapacityUnits: 1
-          WriteCapacityUnits: 1
+          ReadCapacityUnits: 25
+          WriteCapacityUnits: 50
         TableName: ${self:provider.environment.DYNAMODB_TABLE}

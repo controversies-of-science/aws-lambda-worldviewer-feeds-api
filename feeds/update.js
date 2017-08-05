@@ -29,16 +29,16 @@ export const update = (event, context, callback) => {
 		Item: {
 			cardSlug, // partition key
 			feedSlug, // sort key
+
+			feedName: data.feedName,
+			feedSummary: data.feedSummary,
+			feedCategory: data.feedCategory,
+			text: data.text, // array of paragraphs
+			feedAuthor: data.feedAuthor,
+			images: data.images, // nested object
 			discourseLevel: data.discourseLevel,
 
-			name: data.name,
-			text: data.text, // array of paragraphs
-			author: data.author,
-			category: data.category,
-			images: data.images, // nested object
-
 			timestamp,
-			posted: data.posted
 		},
 	};
 
