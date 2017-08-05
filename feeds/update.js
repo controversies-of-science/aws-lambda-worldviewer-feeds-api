@@ -31,7 +31,6 @@ export const update = (event, context, callback) => {
 			feedSlug, // sort key
 
 			feedName: data.feedName,
-			feedSummary: data.feedSummary,
 			feedCategory: data.feedCategory,
 			text: data.text, // array of paragraphs
 			feedAuthor: data.feedAuthor,
