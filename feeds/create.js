@@ -29,11 +29,13 @@ export const create = (event, context, callback) => {
 			feedSlug: data.feedSlug, // sort key
 
 			feedName: data.feedName,
-			feedCategory: data.feedCategory,
+			feedCategories: data.feedCategories, // array
 			text: data.text, // array of paragraphs
-			feedAuthor: data.feedAuthor,
+			feedAuthors: data.feedAuthors, // array
 			images: data.images, // nested object
 			discourseLevel: data.discourseLevel,
+			publishDate: data.publishDate,
+			updateDate: data.updateDate,
 
 			timestamp,
 		},
