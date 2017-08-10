@@ -41,7 +41,7 @@ functions:
           path: feeds/{cardSlug}
           method: post
           cors: true
-          # authorizer: aws_iam
+          authorizer: aws_iam
   get:
     handler: feeds/get.get
     events:
@@ -49,7 +49,7 @@ functions:
           path: feeds/{cardSlug}/{feedSlug}
           method: get
           cors: true
-          # authorizer: aws_iam
+          authorizer: aws_iam
   slugs:
     handler: feeds/slugs.get
     events:
@@ -57,7 +57,7 @@ functions:
           path: feeds/{cardSlug}
           method: get
           cors: true
-          # authorizer: aws_iam
+          authorizer: aws_iam
   delete:
     handler: feeds/delete.del
     events:
@@ -65,7 +65,7 @@ functions:
           path: feeds/{cardSlug}/{feedSlug}
           method: delete
           cors: true
-          # authorizer: aws_iam
+          authorizer: aws_iam
   update:
     handler: feeds/update.update
     events:
@@ -73,7 +73,7 @@ functions:
           path: feeds/{cardSlug}/{feedSlug}
           method: put
           cors: true
-          # authorizer: aws_iam
+          authorizer: aws_iam
 
 resources:
   Resources:
