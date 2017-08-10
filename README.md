@@ -11,7 +11,7 @@ The controversy cards are adapted from the G+ collection [here](https://plus.goo
 
 ## State of the Project
 
-The API has all of the functionality that I'm going to need, but I'm still adding in validations and security.
+The API has all of the functionality that I'm going to need.  Access is now restricted by IAM policy.
 
 ## Endpoints
 
