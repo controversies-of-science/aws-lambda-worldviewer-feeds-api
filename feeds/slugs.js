@@ -18,7 +18,7 @@ export const get = (event, context, callback) => {
 			}
 		},
 		Select: 'SPECIFIC_ATTRIBUTES',
-		AttributesToGet: [ 'feedSlug' ]
+		AttributesToGet: [ 'feedSlug', 'feedName' ]
 	};
 
 	dynamoDb.scan(params, (dbError, result) => {
@@ -27,12 +27,15 @@ export const get = (event, context, callback) => {
 			callback(null, failure(dbError));
 		}
 
-		let slugsArray = [];
+		let feedArray = [];
 
-		for (let slug of result.Items) {
-			slugsArray.push(slug['feedSlug']);
+		for (let feed of result.Items) {
+			feedArray.push({
+				slug: feed['feedSlug'],
+				title: feed['feedName']
+			});
 		}
 
-		callback(null, success(slugsArray));
+		callback(null, success(feedArray));
 	});
 };
